@@ -4,14 +4,13 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Toggle))]
 public class ControlAudio : MonoBehaviour
 {
-    [SerializeField] Slider controlVolumen;
+    
     Toggle botonMute;
 
     void Start()
     {
-        //PlayerPrefs.SetFloat("NivelAudio", controlVolumen.value);
-        botonMute = GetComponent<Toggle>();
-        //PlayerPrefs.SetInt("estaMuteado", 1);
+       
+        botonMute = GetComponent<Toggle>();        
         botonMute.isOn = PlayerPrefs.GetInt("estaMuteado")==1;
     }
 
@@ -32,5 +31,5 @@ public class ControlAudio : MonoBehaviour
         }
 
         botonMute.isOn = PlayerPrefs.GetInt("estaMuteado") == 1;
-    }
+    }    
 }
