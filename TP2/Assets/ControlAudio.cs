@@ -9,9 +9,10 @@ public class ControlAudio : MonoBehaviour
 
     void Start()
     {
-        PlayerPrefs.SetFloat("NivelAudio", controlVolumen.value);
+        //PlayerPrefs.SetFloat("NivelAudio", controlVolumen.value);
         botonMute = GetComponent<Toggle>();
-        botonMute.isOn = PlayerPrefs.GetInt("estaMuteado")==0;
+        //PlayerPrefs.SetInt("estaMuteado", 1);
+        botonMute.isOn = PlayerPrefs.GetInt("estaMuteado")==1;
     }
 
     void Update()

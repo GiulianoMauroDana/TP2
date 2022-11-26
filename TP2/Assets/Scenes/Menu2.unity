@@ -817,6 +817,7 @@ GameObject:
   - component: {fileID: 554607803}
   - component: {fileID: 554607802}
   - component: {fileID: 554607801}
+  - component: {fileID: 554607804}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -887,7 +888,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 554607802}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 554607804}
+        m_TargetAssemblyTypeName: CambioEscena, Assembly-CSharp
+        m_MethodName: CambiarNivel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &554607802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -926,6 +939,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 554607799}
   m_CullTransparentMesh: 1
+--- !u!114 &554607804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554607799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fe04f73c620aa347938356bcc627818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &718312010
 GameObject:
   m_ObjectHideFlags: 0
@@ -1086,7 +1111,19 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 843200726}
+        m_TargetAssemblyTypeName: ControlAudio, Assembly-CSharp
+        m_MethodName: CambiarToggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 1
 --- !u!114 &843200726
 MonoBehaviour:
@@ -1097,9 +1134,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 843200723}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7dda463f77ca28047a0e15bb50b356f6, type: 3}
+  m_Script: {fileID: 11500000, guid: 4ea37b7fd69fd1d4d9f2c32e27f59d06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controlVolumen: {fileID: 0}
 --- !u!1 &1020213207
 GameObject:
   m_ObjectHideFlags: 0

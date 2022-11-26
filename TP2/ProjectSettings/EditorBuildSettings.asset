@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Musica.unity
     guid: bb47fb9c65589f8478e77f5c957d2623
+  - enabled: 1
+    path: Assets/Scenes/Menu2.unity
+    guid: 02cfd82b305a9aa4ebaeaee44c427923
+  - enabled: 1
+    path: Assets/Scenes/Musica2.unity
+    guid: e54e83dfb2083e74db1f6d8eec6a3adb
   m_configObjects: {}
