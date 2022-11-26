@@ -16,7 +16,7 @@ public class Letra : MonoBehaviour
     void Start()
     {
         letraCancion.text = string.Empty;
-        ComienzotCancion();        
+        ComienzaCancion();        
     }
         
     void Update()
@@ -24,7 +24,7 @@ public class Letra : MonoBehaviour
        
         if (!siCominezoCancion)
         {
-            ComienzotCancion();
+            ComienzaCancion();
         }
         else 
         
@@ -35,7 +35,7 @@ public class Letra : MonoBehaviour
 
     }
 
-    public void ComienzotCancion()
+    public void ComienzaCancion()
     {
         siCominezoCancion = true;
         indiceTexto = 0;
