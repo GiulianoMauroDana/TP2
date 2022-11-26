@@ -4,29 +4,30 @@ using TMPro;
 
 public class Letra : MonoBehaviour
 {
-    public TextMeshProUGUI letraCancion;
-    public string[] lineasCancion;
-    public float velocidadTexto;
-    public bool siCominezoCancion;
+    private TextMeshProUGUI letraCancion;
+    private string[] lineasCancion;
+    private float velocidadTexto;
+    //private bool siCominezoCancion;
     int indiceTexto;
-    public float[] inicioLinea;
-    public float[] finLinea;
+    private float[] inicioLinea;
+    private float[] finLinea;
         
     void Start()
     {
         letraCancion.text = string.Empty;
-        ComienzotCancion();
-        Debug.Log(lineasCancion[0].Length);
+        ComienzotCancion();        
     }
         
     void Update()
     {
-       
+       /*
         if (!siCominezoCancion)
         {
             ComienzotCancion();
         }
-        else if(letraCancion.text == lineasCancion[indiceTexto])
+        else 
+        */
+        if(letraCancion.text == lineasCancion[indiceTexto])
         {
             CambioLinea();
         }
@@ -35,7 +36,7 @@ public class Letra : MonoBehaviour
 
     public void ComienzotCancion()
     {
-        siCominezoCancion = true;
+        //siCominezoCancion = true;
         indiceTexto = 0;
         StartCoroutine(EscribirTexto());
     }

@@ -9,7 +9,7 @@ public class BotonMute : MonoBehaviour
     void Start()
     {
         botonMute = GetComponent<Toggle>();
-        
+        /*
         if (botonMute.isOn)
         {
             PlayerPrefs.SetFloat("estaMuteado", 0);
@@ -18,10 +18,11 @@ public class BotonMute : MonoBehaviour
         {
             PlayerPrefs.SetFloat("estaMuteado", 1);
         }
+        */
         /*
         if (PlayerPrefs.GetFloat("estaMuteado")==0)
         {
-            botonMute.isOn;
+            botonMute.
         }
         */
     }    

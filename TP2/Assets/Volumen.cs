@@ -2,11 +2,12 @@ using UnityEngine;
 
 public class Volumen : MonoBehaviour
 {
-    public AudioSource musicaVolumen;
+    private AudioSource musicaVolumen;
 
     private void Start()
     {
        musicaVolumen.volume = PlayerPrefs.GetFloat("VolumenMusica");
+        /*
         if (musicaVolumen.mute)
         {
             PlayerPrefs.GetFloat("estaMuteado",1);
@@ -15,5 +16,7 @@ public class Volumen : MonoBehaviour
         {
             PlayerPrefs.GetFloat("estaMuteado", 0);
         }
+        */
+        musicaVolumen.mute = PlayerPrefs.GetInt("estaMuteado") == 1;
     }       
 }

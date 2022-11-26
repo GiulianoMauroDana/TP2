@@ -4,23 +4,20 @@ using UnityEngine.UI;
 public class ControlVolumen : MonoBehaviour
 {   
     [SerializeField] Slider volumenSlider;
+    private AudioSource valorVolumen;
 
     public void Start()
     {
         if (!PlayerPrefs.HasKey("VolumenMusica"))
         {            
             CargarVolumen();
-        }
-        else
-        {
-            CargarVolumen();
-        }
+        }        
     }
 
     public void CambiarVolumen()
     {
-        AudioListener.volume = Mathf.Log10(volumenSlider.value);
-        GuadarVolumen();
+        valorVolumen.volume = volumenSlider.value;
+        GuadarVolumen();        
     }
 
     public void CargarVolumen()
@@ -30,6 +27,6 @@ public class ControlVolumen : MonoBehaviour
 
     public void GuadarVolumen()
     {
-        PlayerPrefs.SetFloat("VolumenMusica", Mathf.Log10(volumenSlider.value));
+        PlayerPrefs.SetFloat("VolumenMusica", volumenSlider.value);
     }
 }
