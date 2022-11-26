@@ -11,13 +11,8 @@ public class ControlAudio : MonoBehaviour
     {
        
         botonMute = GetComponent<Toggle>();        
-        botonMute.isOn = PlayerPrefs.GetInt("estaMuteado")==1;
+        botonMute.isOn = PlayerPrefs.GetInt("estaMuteado",0)==1;
     }
-
-    void Update()
-    {
-        
-    }    
 
     public void CambiarToggle()
     {
@@ -29,7 +24,5 @@ public class ControlAudio : MonoBehaviour
         {
             PlayerPrefs.SetInt("estaMuteado", 0);
         }
-
-        botonMute.isOn = PlayerPrefs.GetInt("estaMuteado") == 1;
     }    
 }

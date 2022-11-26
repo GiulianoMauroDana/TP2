@@ -6,18 +6,7 @@ public class ControlSlider : MonoBehaviour
     [SerializeField] Slider controlVolumen;
 
     void Start()
-    {
-        //PlayerPrefs.SetFloat("NivelAudio", 0);
-        controlVolumen.value = PlayerPrefs.GetFloat("NivelAudio");
-    }
-
-    void Update()
-    {
-        
-    }
-
-    public void CambiarSlider()
-    {
+    {        
         controlVolumen.value = PlayerPrefs.GetFloat("NivelAudio");
     }
 
