@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class ControlVolumen : MonoBehaviour
 {   
     [SerializeField] Slider volumenSlider;
-    private AudioSource valorVolumen;
+    //private AudioSource valorVolumen;
 
     public void Start()
     {
@@ -16,8 +16,15 @@ public class ControlVolumen : MonoBehaviour
 
     public void CambiarVolumen()
     {
+        /*
         valorVolumen.volume = volumenSlider.value;
-        GuadarVolumen();        
+        GuadarVolumen();
+        */
+        
+        AudioListener.volume = volumenSlider.value;
+        GuadarVolumen();
+        
+
     }
 
     public void CargarVolumen()

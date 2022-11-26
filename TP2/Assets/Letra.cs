@@ -2,15 +2,16 @@ using System.Collections;
 using UnityEngine;
 using TMPro;
 
+
 public class Letra : MonoBehaviour
 {
     private TextMeshProUGUI letraCancion;
-    private string[] lineasCancion;
-    private float velocidadTexto;
-    //private bool siCominezoCancion;
+    public string[] lineasCancion;
+    public float velocidadTexto;
+    private bool siCominezoCancion;
     int indiceTexto;
-    private float[] inicioLinea;
-    private float[] finLinea;
+    public float[] inicioLinea;
+    public float[] finLinea;
         
     void Start()
     {
@@ -20,13 +21,13 @@ public class Letra : MonoBehaviour
         
     void Update()
     {
-       /*
+       
         if (!siCominezoCancion)
         {
             ComienzotCancion();
         }
         else 
-        */
+        
         if(letraCancion.text == lineasCancion[indiceTexto])
         {
             CambioLinea();
@@ -36,22 +37,19 @@ public class Letra : MonoBehaviour
 
     public void ComienzotCancion()
     {
-        //siCominezoCancion = true;
+        siCominezoCancion = true;
         indiceTexto = 0;
         StartCoroutine(EscribirTexto());
     }
 
     IEnumerator EscribirTexto ()
-    {
-        
+    {        
         foreach (char texto in lineasCancion[indiceTexto].ToCharArray())
         {
             letraCancion.text += texto;            
             yield return new WaitForSeconds((finLinea[indiceTexto] - inicioLinea[indiceTexto]) / (lineasCancion[indiceTexto].Length + velocidadTexto));
             CambioLinea();
-        }
-        
-                
+        }         
     }
 
     public void CambioLinea()
