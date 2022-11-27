@@ -215,20 +215,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd7c204b91f7d114aaa9a07604c9b7b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letraCancion:
-  - prueba1
-  - pruebaaa2
-  - prueb3
-  tiempoInicial:
-  - 0
-  - 5
-  - 10
-  tiempoFinal:
-  - 5
-  - 10
-  - 15
-  velocidadLetra: 0.1
-  mostrarLetra: {fileID: 182005008}
+  mostrarTexto: {fileID: 182005008}
+  velocidadLetra:
+  - 8
+  - 12
+  - 17
+  - 20
+  - 24
+  - 28
+  - 33
+  - 36
+  - 41
+  - 44
+  - 49
+  - 52
+  - 57
+  - 61
+  - 65
+  - 68
+  - 106
+  - 109
+  - 114
+  - 118
+  - 123
+  - 125
+  - 131
+  - 135
+  - 139
+  cancionLetra:
+  - Fly me to the Moon
+  - 'Let me play among the stars '
+  - Let me see what spring is like
+  - On Jupiter and Mars
+  - In other words
+  - Hold my hand
+  - In other words
+  - Baby, kiss me
+  - Fill my heart with song
+  - And let me sing for ever more
+  - You are all I long for
+  - All I worship and adore
+  - In other words
+  - Please, be true
+  - In other words
+  - I love you
+  - Fill my heart with song
+  - Let me sing for ever more
+  - You are all I long for
+  - All I worship and adore
+  - In other words
+  - Please, be true
+  - In other words
+  - In other words
+  - I love you
 --- !u!1 &730154216
 GameObject:
   m_ObjectHideFlags: 0
