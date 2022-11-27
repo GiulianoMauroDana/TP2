@@ -15,7 +15,10 @@ public class CancionLetra : MonoBehaviour
     void Start()
     {
         mostrarTexto.text = string.Empty;
-        StartCoroutine(MostrarLetra());
+        if (PlayerPrefs.GetInt("estaMuteado")==1)
+        {
+            StartCoroutine(MostrarLetra());
+        }
     }
     
     IEnumerator MostrarLetra()
