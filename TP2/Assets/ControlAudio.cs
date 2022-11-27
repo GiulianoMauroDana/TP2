@@ -8,8 +8,7 @@ public class ControlAudio : MonoBehaviour
     Toggle botonMute;
 
     void Start()
-    {
-       
+    {       
         botonMute = GetComponent<Toggle>();        
         botonMute.isOn = PlayerPrefs.GetInt("estaMuteado",0)==1;
     }
